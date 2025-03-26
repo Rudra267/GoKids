@@ -6743,3 +6743,20 @@ padding-bottom:50px;
 .shorting > h4::before{
   content: "||";
 }
+
+.cmt-box{
+  display: flex !important;
+  gap: 5px;
+}
+
+@media (max-width:700px){
+  .cmt-box{
+    overflow-x: scroll;
+  }
+}
+
+
+.active-btn {
+  background-color: #ff6600 !important; /* Change to your preferred active color */
+  color: white !important;
+}
