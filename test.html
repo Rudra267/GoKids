@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dress Filter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+        }
+        .filter-buttons {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+        }
+        .filter-buttons button {
+            margin-left: 5px;
+            padding: 5px 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .filter-buttons button:hover {
+            background-color: darkblue;
+        }
+        .dress-list {
+            list-style: none;
+            padding: 0;
+        }
+        .dress-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="filter-buttons">
+            <button onclick="filterByAge('4')">4 Age</button>
+            <button onclick="filterByAge('5')">5 Age</button>
+            <button onclick="filterByAge('10')">10 Age</button>
+        </div>
+        <h2>Dress</h2>
+        <ul id="dress-list" class="dress-list">
+            <li data-age="4">Red Frock</li>
+            <li data-age="5">Blue T-Shirt</li>
+            <li data-age="10">Green Jacket</li>
+            <li data-age="4">Yellow Dress</li>
+            <li data-age="5">White Kurta</li>
+        </ul>
+    </div>
+
+    <script>
+        function filterByAge(age) {
+            const dresses = document.querySelectorAll('#dress-list li');
+            dresses.forEach(dress => {
+                if (dress.getAttribute('data-age') === age) {
+                    dress.style.display = 'block';
+                } else {
+                    dress.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
