@@ -6747,16 +6747,17 @@ padding-bottom:50px;
 .cmt-box{
   display: flex !important;
   gap: 5px;
-}
-
-@media (max-width:700px){
-  .cmt-box{
-    overflow-x: scroll;
-  }
+  overflow-x: scroll;
 }
 
 
 .active-btn {
   background-color: #ff6600 !important; /* Change to your preferred active color */
   color: white !important;
+}
+
+@media(max-width:576px){
+  .cmt-box{
+   flex-direction: column;
+  }
 }
