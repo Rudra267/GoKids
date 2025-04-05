@@ -6747,7 +6747,7 @@ padding-bottom:50px;
 .cmt-box{
   display: flex !important;
   gap: 5px;
-  overflow-x: scroll;
+
 }
 
 
@@ -6756,8 +6756,14 @@ padding-bottom:50px;
   color: white !important;
 }
 
-@media(max-width:576px){
+@media(max-width:578px){
   .cmt-box{
    flex-direction: column;
+  }
+}
+
+@media (max-width:900px){
+  .cmt-box{
+    overflow-x: scroll;
   }
 }
